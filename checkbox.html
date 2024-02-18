@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkboxes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">Checkbox 1</label><br>
+        
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2">Checkbox 2</label><br>
+        
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3">Checkbox 3</label><br>
+        
+        <input type="checkbox" id="checkbox4">
+        <label for="checkbox4">Checkbox 4</label><br>
+        
+        <input type="checkbox" id="checkbox5">
+        <label for="checkbox5">Checkbox 5</label><br>
+        
+        <input type="checkbox" id="checkbox6">
+        <label for="checkbox6">Checkbox 6</label><br>
+    </div>
+</body>
+</html>
 
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to checkboxes */
+.checkbox-container {
+    margin: 20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background-color: #2196F3;
+}
+
+input[type="checkbox"] + label:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 9px;
+    width: 6px;
+    height: 2px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+}
+
+input[type="checkbox"]:checked + label:after {
+    display: block;
+}
