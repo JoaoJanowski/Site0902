@@ -3,70 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/3458.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Burger King</title>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Burger_King_Logo.svg/1280px-Burger_King_Logo.svg.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        .burger-king {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #ff9800;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .menu-item {
+            flex: 0 1 calc(33.33% - 20px);
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            color: #333;
+        }
+
+        .menu-item p {
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Apply styles to checkboxes */
+        .checkbox-container {
+            margin: 20px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"] + label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #aaa;
+            background-color: #fff;
+        }
+
+        input[type="checkbox"]:checked + label:before {
+            background-color: #ff9800;
+        }
+
+        input[type="checkbox"] + label:after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 9px;
+            width: 6px;
+            height: 2px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label:after {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/3458.png" alt="Burger King Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Burger_King_Logo.svg/1280px-Burger_King_Logo.svg.png">
         </div>
         <h1 class="burger-king">Burger King</h1>
         <nav>
             <ul>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#locations">Localizações</a></li>
-                <li><a href="#contact">Contato</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#promotions">Promoções</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <section id="menu">
+        <section>
             <h2>Menu</h2>
             <div class="menu-items">
-                <!-- Aqui você pode adicionar os itens do menu com imagens -->
                 <div class="menu-item">
-                    <img src="https://via.placeholder.com/150" alt="Hambúrguer">
-                    <h3>Hambúrguer</h3>
-                    <p>Delicioso hambúrguer de carne grelhada, alface, queijo, tomate e molho especial.</p>
+                    <img src="https://via.placeholder.com/150" alt="Burger">
+                    <h3>Whopper</h3>
+                    <p>The iconic burger with flame-grilled beef.</p>
                 </div>
                 <div class="menu-item">
-                    <img src="https://via.placeholder.com/150" alt="Batata Frita">
-                    <h3>Batata Frita</h3>
-                    <p>Porção crocante de batatas fritas, perfeitas para acompanhar seu lanche favorito.</p>
+                    <img src="https://via.placeholder.com/150" alt="Chicken Fries">
+                    <h3>Chicken Fries</h3>
+                    <p>Crispy and tender chicken strips in fry form.</p>
                 </div>
-                <!-- Adicione mais itens de menu conforme necessário -->
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="Fries">
+                    <h3>Fries</h3>
+                    <p>Golden, crispy, and delicious.</p>
+                </div>
             </div>
-        </section>
-
-        <section id="locations">
-            <h2>Localizações</h2>
-            <!-- Adicione um mapa ou lista de localizações das filiais do Burger King -->
-        </section>
-
-        <section id="contact">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para pedidos, reclamações ou informações adicionais:</p>
-            <ul>
-                <li><strong>Telefone:</strong> 55 41-99955-7043</li>
-                <li><strong>Email:</strong> contato@burgerking.com</li>
-                <!-- Adicione mais informações de contato conforme necessário -->
-            </ul>
-        </section>
-
-        <section id="about">
-            <h2>Sobre</h2>
-            <p>Conheça mais sobre o Burger King, nossa história e nossos valores.</p>
-        </section>
-
-        <section id="promotions">
-            <h2>Promoções</h2>
-            <!-- Adicione informações sobre as promoções atuais do Burger King -->
         </section>
     </main>
 
@@ -74,8 +199,33 @@
         <p>&copy; 2024 Burger King. Todos os direitos reservados.</p>
     </footer>
 
-    <style>
-        /* CSS será adicionado aqui para estilizar o site */
-    </style>
+    <script>
+        // JavaScript
+        const carousel = document.querySelector('.carousel-content');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const totalItems = carouselItems.length;
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            if (index < 0) {
+                index = totalItems - 1;
+            } else if (index >= totalItems) {
+                index = 0;
+            }
+            const offset = -index * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        setInterval(nextSlide, 6000);
+    </script>
 </body>
 </html>
