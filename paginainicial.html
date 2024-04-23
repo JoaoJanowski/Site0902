@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s">
+    <title>Burger King</title>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Burger_King_Logo.svg/1280px-Burger_King_Logo.svg.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* CSS */
@@ -13,57 +14,46 @@
             padding: 0;
             background-color: #fff;
         }
-
         header {
             background-color: #ff9800;
             color: #fff;
             padding: 20px 0;
             text-align: center;
         }
-
         .logo img {
             width: 80px;
             height: auto;
         }
-
         .burger-king {
             margin-top: 10px;
         }
-
         nav ul {
             list-style: none;
             padding: 0;
         }
-
         nav ul li {
             display: inline;
             margin-right: 20px;
         }
-
         nav a {
             text-decoration: none;
             color: #fff;
             font-weight: bold;
         }
-
         main {
             padding: 20px;
         }
-
         section {
             margin-bottom: 40px;
         }
-
         h2 {
             color: #ff9800;
         }
-
         .menu-items {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
-
         .menu-item {
             flex: 0 1 calc(33.33% - 20px);
             background-color: #f9f9f9;
@@ -72,31 +62,25 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
         .menu-item img {
             width: 100px;
             height: auto;
             border-radius: 50%;
             margin-bottom: 10px;
         }
-
         .menu-item h3 {
             color: #333;
         }
-
         .menu-item p {
             color: #666;
         }
-
         .contact-section {
             text-align: center;
             margin-top: 40px;
         }
-
         .contact-item {
             margin-bottom: 20px;
         }
-
         footer {
             background-color: #2196F3; /* Alterado para azul */
             color: #fff;
@@ -106,29 +90,24 @@
             bottom: 0;
             width: 100%;
         }
-
         /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         /* Apply styles to checkboxes */
         .checkbox-container {
             margin: 20px;
         }
-
         input[type="checkbox"] {
             display: none;
         }
-
         input[type="checkbox"] + label {
             position: relative;
             padding-left: 25px;
             cursor: pointer;
         }
-
         input[type="checkbox"] + label:before {
             content: "";
             position: absolute;
@@ -139,11 +118,9 @@
             border: 1px solid #aaa;
             background-color: #fff;
         }
-
         input[type="checkbox"]:checked + label:before {
             background-color: #ff9800;
         }
-
         input[type="checkbox"] + label:after {
             content: "";
             position: absolute;
@@ -156,11 +133,9 @@
             transform: rotate(45deg);
             display: none;
         }
-
         input[type="checkbox"]:checked + label:after {
             display: block;
         }
-
         /* Carousel styles */
         .carousel {
             width: 100%;
@@ -169,23 +144,19 @@
             padding-top: 300px; /* Alterado para aumentar a altura */
             margin-top: -100px; /* Adicionado para mover o carrossel para cima */
         }
-
         .carousel-content {
             display: flex;
             transition: transform 0.5s ease;
         }
-
         .carousel-item {
             min-width: 100%;
             overflow: hidden;
         }
-
         .carousel-item img {
             width: 100%;
             height: 400px; /* Ajustado para aumentar a altura */
             object-fit: cover;
         }
-
         .carousel-controls {
             position: absolute;
             top: 50%;
@@ -196,7 +167,6 @@
             align-items: center;
             z-index: 1;
         }
-
         .carousel-controls button {
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
@@ -205,11 +175,9 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
         .carousel-controls button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-
         /* JavaScript hidden class */
         .hidden {
             display: none;
@@ -217,20 +185,23 @@
     </style>
 </head>
 <body>
-     <header>
+    <header>
         <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Burger_King_Logo.svg/1280px-Burger_King_Logo.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Burger_King_Logo.svg/1280px-Burger_King_Logo.svg.png" alt="Burger King Logo">
         </div>
         <h1 class="burger-king">Burger King</h1>
         <nav>
             <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Contato</a></li>
                 <li><a href="paginainicial.html">Página Inicial</a></li>
                 <li><a href="index.html">Cardápio</a></li>
                 <li><a href="contatos.html">Contato</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section>
             <h2>Promoções</h2>
@@ -253,16 +224,13 @@
             </div>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2024 Burger King. Todos os direitos reservados.</p>
     </footer>
-
     <script>
         // JavaScript for carousel
         let slideIndex = 0;
         const slides = document.querySelectorAll('.carousel-item');
-
         function showSlides() {
             slides.forEach(slide => slide.style.display = 'none');
             slideIndex++;
@@ -272,7 +240,6 @@
             slides[slideIndex - 1].style.display = 'block';
             setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
-
         function nextSlide() {
             slideIndex++;
             if (slideIndex > slides.length) {
@@ -280,7 +247,6 @@
             }
             showSlides();
         }
-
         function prevSlide() {
             slideIndex--;
             if (slideIndex < 1) {
@@ -288,7 +254,6 @@
             }
             showSlides();
         }
-
         showSlides();
     </script>
 </body>
