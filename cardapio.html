@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        .burger-king {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #ff9800;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .menu-item {
+            flex: 0 1 calc(33.33% - 20px);
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            color: #333;
+        }
+
+        .menu-item p {
+            color: #666;
+        }
+
+        footer {
+            background-color: #2196F3; /* Alterado para azul */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Apply styles to checkboxes */
+        .checkbox-container {
+            margin: 20px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"] + label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #aaa;
+            background-color: #fff;
+        }
+
+        input[type="checkbox"]:checked + label:before {
+            background-color: #ff9800;
+        }
+
+        input[type="checkbox"] + label:after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 9px;
+            width: 6px;
+            height: 2px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label:after {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s">
+        </div>
+        <h1 class="burger-king"></h1>
+        <nav>
+            <ul>
+                <li><a href="localizacao.html">Localização</a></li>
+                <li><a href="paginainicial.html">Página Inicial</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="contatos.html">Contato</a></li>
+                <li><a href="feed.html">FeedBack</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Cardápio</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/_800x600_crop_center-center_none/whopper-thumb_2021-09-16-125319_mppe.png?mtime=20210916125320&focal=none&tmtime=20210916125505">
+                    <h3>Whopper</h3>
+                    <p>O clássico hambúrguer com carne grelhada, queijo, alface, tomate, cebola e molho especial, servido em um pão de gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291445_5HD4_i.jpg">
+                    <h3>Big King</h3>
+                    <p>Dois hambúrgueres grelhados, queijo, alface, cebola, picles e molho especial, servidos em um pão de hambúrguer com gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/delish-211105-popeyes-chicken-sandwich-001-ab-web-1637207425.jpg?crop=0.8895238095238095xw:1xh;center,top&resize=1200:*">
+                    <h3>Chicken Sandwich</h3>
+                    <p>Sanduíche de frango crocante com alface, tomate, maionese e servido em um pão de hambúrguer com gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://uploads.metropoles.com/wp-content/uploads/2015/10/06194347/Super-Cheddar-Bacon-2.png">
+                    <h3>Cheddar Bacon</h3>
+                    <p>Hambúrguer grelhado, queijo cheddar derretido, bacon crocante, cebola caramelizada, alface e tomate, servido em um pão com gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXzzwU8Wye41w_jejFvphRic4unqh44uK1wf9bL1tZhQ&s">
+                    <h3>Double Cheeseburger</h3>
+                    <p>Dois hambúrgueres grelhados, queijo americano, ketchup, mostarda, cebola picada e picles, servidos em um pão com gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKfp5BweC_VgGKzZZTnLB6jmB4sVn20MqmZk_5bUswZg&s">
+                    <h3>Chicken Nuggets</h3>
+                    <p>Pedaços de frango crocante empanados, acompanhados de molho barbecue.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlTrubZRE3zF1tU9COS315sBytPADsVPdCUYAnLgH2kw&s">
+                    <h3>Salada Caesar</h3>
+                    <p>Alface romana fresca, frango grelhado, queijo parmesão, croutons crocantes e molho Caesar.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/originals/6f/5b/7c/6f5b7c28f992aca6ab2e885cb7824ecb.png">
+                    <h3>Onion Rings</h3>
+                    <p>Anéis de cebola empanados e crocantes, perfeitos para acompanhar o seu hambúrguer favorito.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://marcasmais.com.br/wp-content/uploads/2023/01/BK-Laka-scaled.jpg">
+                    <h3>Milkshake de Baunilha</h3>
+                    <p>Milkshake cremoso de baunilha, feito com sorvete premium e finalizado com chantilly.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Sundae-Chocolate-thumb.png?mtime=20210916155926&focal=none">
+                    <h3>Sundae de Chocolate</h3>
+                    <p>Delicioso sundae de chocolate com calda de chocolate, chantilly e cobertura de chocolate crocante.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Burger King. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
