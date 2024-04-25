@@ -4,41 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burger King - Promoções</title>
-  <style>
-    /* Estilos CSS */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #dd2222;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-    #carousel {
-      width: 80%;
-      margin: 20px auto;
-      position: relative;
-      overflow: hidden;
-    }
-    #carousel ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    #carousel ul li {
-      min-width: 100%;
-      overflow: hidden;
-    }
-    #carousel img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
+   <style>
+        /* CSS */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        .burger-king {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #ff9800;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .menu-item {
+            flex: 0 1 calc(33.33% - 20px);
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            color: #333;
+        }
+
+        .menu-item p {
+            color: #666;
+        }
+
+        footer {
+            background-color: #2196F3; /* Alterado para azul */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Apply styles to checkboxes */
+        .checkbox-container {
+            margin: 20px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"] + label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #aaa;
+            background-color: #fff;
+        }
+
+        input[type="checkbox"]:checked + label:before {
+            background-color: #ff9800;
+        }
+
+        input[type="checkbox"] + label:after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 9px;
+            width: 6px;
+            height: 2px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label:after {
+            display: block;
+        }
+    </style>
 <header>
         <div class="logo">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s">
