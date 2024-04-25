@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Localização do Burger King</title>
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* CSS */
@@ -99,118 +98,26 @@
             bottom: 0;
             width: 100%;
         }
-
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .checkbox-container {
-            margin: 20px;
-        }
-
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        input[type="checkbox"] + label {
-            position: relative;
-            padding-left: 25px;
-            cursor: pointer;
-        }
-
-        input[type="checkbox"] + label:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 2px;
-            width: 18px;
-            height: 18px;
-            border: 1px solid #aaa;
-            background-color: #fff;
-        }
-
-        input[type="checkbox"]:checked + label:before {
-            background-color: #ff9800;
-        }
-
-        input[type="checkbox"] + label:after {
-            content: "";
-            position: absolute;
-            left: 6px;
-            top: 9px;
-            width: 6px;
-            height: 2px;
-            border: solid #fff;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-            display: none;
-        }
-
-        input[type="checkbox"]:checked + label:after {
-            display: block;
-        }
-
-        .location-container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        .map {
+        
+        .map-container {
             width: 100%;
-            height: 300px;
-            border: none;
-            border-radius: 10px;
-            background: url('https://maps.googleapis.com/maps/api/staticmap?center=-23.550520,-46.633308&zoom=12&size=600x300&key=YOUR_GOOGLE_MAPS_API_KEY') no-repeat center center;
-            background-size: cover;
-        }
-
-        .location-search {
+            height: 500px;
             margin-top: 20px;
-            width: 80%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .search-button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-
-        .search-button:hover {
-            background-color: #45a049;
         }
 
         #map {
-            height: 500px; 
-            width: 100%; 
+            width: 100%;
+            height: 100%;
         }
-    </style>
     </style>
 </head>
 <body>
-   <header>
-         <p>Clique <a href="https://www.google.com/maps?q=São+Paulo">https://www.google.com/search?sca_esv=ee88421e58fba9e6&q=mapa+bk+portao&npsic=0&rflfq=1&rldoc=1&rllag=-25475873,-49293021,408&tbm=lcl&sa=X&ved=2ahUKEwj9wJKKoNyFAxV9O7kGHRohBagQtgN6BAgZEAE&biw=1360&bih=641&dpr=1#rlfi=hd:;si:;mv:[[-25.472326799999998,-49.290707999999995],[-25.479419999999998,-49.2953342]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:4</a> para ver o mapa de São Paulo no Google Maps.</p>
-    <div class="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s">
-    </div>
-    <h1 class="burger-king"></h1>
-     <nav>
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s" alt="Burger King Logo">
+        </div>
+        <h1 class="burger-king">Burger King</h1>
+        <nav>
             <ul>
                 <li><a href="localizacao.html">Localização</a></li>
                 <li><a href="index.html">Cardápio</a></li>
@@ -218,11 +125,13 @@
                 <li><a href="feed.html">FeedBack</a></li>
             </ul>
         </nav>
-</header>
-    </nav>
-    <br>
+    </header>
 
-    <div id="map"></div>
+    <main>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2024 Burger King. Todos os direitos reservados.</p>
@@ -230,24 +139,33 @@
 
     <script>
         function initMap() {
-            // Coordenadas do local que você deseja mostrar (por exemplo, São Paulo, Brasil)
-            const location = { lat:-25.5008352, lng:-49.365879 };
-    
- 
-            const map = new google.maps.Map(document.getElementById("map"), {
-                center: location,
-                zoom: 12, 
-            });
-    
- 
+            // Coordenadas do Burger King
+            const burgerKingLocation = { lat: -25.5008352, lng: -49.365879 };
+
+            // Opções do mapa
+            const mapOptions = {
+                center: burgerKingLocation,
+                zoom: 15
+            };
+
+            // Criando o mapa
+            const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            // Marcador do Burger King
             const marker = new google.maps.Marker({
-                position: location,
+                position: burgerKingLocation,
                 map: map,
-                title: "São Paulo, Brasil",
+                title: "Burger King"
             });
         }
-    
-        window.onload = initMap;
+
+        // Inicializando o mapa quando a página carrega
+        window.onload = function() {
+            initMap();
+        };
     </script>
+
+    <!-- Importando a API do Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DA_API&callback=initMap" async defer></script>
 </body>
 </html>
