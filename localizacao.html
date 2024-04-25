@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Localização do Burger King</title>
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* CSS */
@@ -99,14 +100,13 @@
             width: 100%;
         }
 
-        /* Reset default styles */
+    
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Apply styles to checkboxes */
         .checkbox-container {
             margin: 20px;
         }
@@ -152,6 +152,55 @@
         input[type="checkbox"]:checked + label:after {
             display: block;
         }
+
+        .location-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .map {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            background: url('https://maps.googleapis.com/maps/api/staticmap?center=-23.550520,-46.633308&zoom=12&size=600x300&key=YOUR_GOOGLE_MAPS_API_KEY') no-repeat center center;
+            background-size: cover;
+        }
+
+        .location-search {
+            margin-top: 20px;
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #45a049;
+        }
+
+        #map {
+            height: 500px; 
+            width: 100%; 
+        }
+    </style>
     </style>
 </head>
 <body>
@@ -171,13 +220,34 @@
         </nav>
     </header>
     </nav>
-    <div class="container">
-        <h1>Localização do Burger King</h1>
-        <p>Encontre o Burger King mais próximo:</p>
-    <iframe src="https://www.google.com/search?q=bk+portao&oq=bk+portao&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDIzMDJqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8" width=”600” height=”450” frameborder=”0” style=”border:0;” allowfullscreen=”" aria-hidden="false" tabindex="0"></iframe>
-    </div>
+    <br>
+
+    <div id="map"></div>
+
     <footer>
         <p>&copy; 2024 Burger King. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function initMap() {
+            // Coordenadas do local que você deseja mostrar (por exemplo, São Paulo, Brasil)
+            const location = { lat:-25.5008352, lng:-49.365879 };
+    
+ 
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: location,
+                zoom: 12, 
+            });
+    
+ 
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "São Paulo, Brasil",
+            });
+        }
+    
+        window.onload = initMap;
+    </script>
 </body>
 </html>
