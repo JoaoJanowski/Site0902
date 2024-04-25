@@ -14,46 +14,57 @@
             padding: 0;
             background-color: #fff;
         }
+
         header {
             background-color: #ff9800;
             color: #fff;
             padding: 20px 0;
             text-align: center;
         }
+
         .logo img {
             width: 80px;
             height: auto;
         }
+
         .burger-king {
             margin-top: 10px;
         }
+
         nav ul {
             list-style: none;
             padding: 0;
         }
+
         nav ul li {
             display: inline;
             margin-right: 20px;
         }
+
         nav a {
             text-decoration: none;
             color: #fff;
             font-weight: bold;
         }
+
         main {
             padding: 20px;
         }
+
         section {
             margin-bottom: 40px;
         }
+
         h2 {
             color: #ff9800;
         }
+
         .menu-items {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
+
         .menu-item {
             flex: 0 1 calc(33.33% - 20px);
             background-color: #f9f9f9;
@@ -62,25 +73,22 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         .menu-item img {
             width: 100px;
             height: auto;
             border-radius: 50%;
             margin-bottom: 10px;
         }
+
         .menu-item h3 {
             color: #333;
         }
+
         .menu-item p {
             color: #666;
         }
-        .contact-section {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .contact-item {
-            margin-bottom: 20px;
-        }
+
         footer {
             background-color: #2196F3; /* Alterado para azul */
             color: #fff;
@@ -90,24 +98,29 @@
             bottom: 0;
             width: 100%;
         }
+
         /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         /* Apply styles to checkboxes */
         .checkbox-container {
             margin: 20px;
         }
+
         input[type="checkbox"] {
             display: none;
         }
+
         input[type="checkbox"] + label {
             position: relative;
             padding-left: 25px;
             cursor: pointer;
         }
+
         input[type="checkbox"] + label:before {
             content: "";
             position: absolute;
@@ -118,9 +131,11 @@
             border: 1px solid #aaa;
             background-color: #fff;
         }
+
         input[type="checkbox"]:checked + label:before {
             background-color: #ff9800;
         }
+
         input[type="checkbox"] + label:after {
             content: "";
             position: absolute;
@@ -133,64 +148,20 @@
             transform: rotate(45deg);
             display: none;
         }
+
         input[type="checkbox"]:checked + label:after {
             display: block;
         }
-        /* Carousel styles */
-        .carousel {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            padding-top: 300px; /* Alterado para aumentar a altura */
-            margin-top: -100px; /* Adicionado para mover o carrossel para cima */
-        }
-        .carousel-content {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .carousel-item {
-            min-width: 100%;
-            overflow: hidden;
-        }
-        .carousel-item img {
-            width: 100%;
-            height: 400px; /* Ajustado para aumentar a altura */
-            object-fit: cover;
-        }
-        .carousel-controls {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1;
-        }
-        .carousel-controls button {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .carousel-controls button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        /* JavaScript hidden class */
-        .hidden {
-            display: none;
-        }
     </style>
 </head>
+
 <body>
-   <header>
+    <header>
         <div class="logo">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPn9xYpej-gP5xLsdhzvn5c8ILs4m4wjco5IWkQqflGA&s">
         </div>
         <h1 class="burger-king"></h1>
-         <nav>
+        <nav>
             <ul>
                 <li><a href="localizacao.html">Localização</a></li>
                 <li><a href="paginainicial.html">Página Inicial</a></li>
@@ -200,71 +171,67 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
-            <h2>Promoções</h2>
-            <div class="carousel">
-                <div class="carousel-content">
-                    <div class="carousel-item">
-                        <img src="https://gkpb.com.br/wp-content/uploads/2021/08/bk-todo-dia-promocao-9-90-2-por-16-90-burger-king-promo-clube-bk-gkpb.jpg" alt="Promoção 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://gkpb.com.br/wp-content/uploads/2023/12/gkpb-promo-bk-2-25-whopper.jpg" alt="Promoção 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.cidademarketing.com.br/marketing/wp-content/uploads/2023/01/bk_drive_descontos.png" alt="Promoção 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.infomoney.com.br/wp-content/uploads/2019/11/BK-e-Mercado-Pago.jpg?fit=1300%2C731&quality=50&strip=all" alt="Promoção 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.publicitarioscriativos.com/wp-content/uploads/2021/11/Burger-King-ira-oferecer-Whopper-em-troca-de-pontos-nessa-Black-Friday-3.png" alt="Promoção 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://d3a0dcqzwu0eh0.cloudfront.net/images/350_rvnvbwgvqqqkfch0icat.jpg" alt="Promoção 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.burgerking.com.br/_nuxt/img/clube-bk-tem-recompensas-te-esperando.d5df368.png" alt="Promoção 3">
-                    </div>
+        <section id="menu">
+            <h2>Cardápio</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/_800x600_crop_center-center_none/whopper-thumb_2021-09-16-125319_mppe.png?mtime=20210916125320&focal=none&tmtime=20210916125505">
+                    <h3>Whopper</h3>
+                    <p>O clássico hambúrguer com carne grelhada, queijo, alface, tomate, cebola e molho especial, servido em um pão de gergelim.</p>
                 </div>
-                <div class="carousel-controls">
-                    <button onclick="prevSlide()">&#10094;</button>
-                    <button onclick="nextSlide()">&#10095;</button>
+                <div class="menu-item">
+                    <img src="https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291445_5HD4_i.jpg">
+                    <h3>Big King</h3>
+                    <p>Dois hambúrgueres grelhados, queijo, alface, cebola, picles e molho especial, servidos em um pão de hambúrguer com gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/delish-211105-popeyes-chicken-sandwich-001-ab-web-1637207425.jpg?crop=0.8895238095238095xw:1xh;center,top&resize=1200:*">
+                    <h3>Chicken Sandwich</h3>
+                    <p>Sanduíche de frango crocante com alface, tomate, maionese e servido em um pão de hambúrguer com gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://uploads.metropoles.com/wp-content/uploads/2015/10/06194347/Super-Cheddar-Bacon-2.png">
+                    <h3>Cheddar Bacon</h3>
+                    <p>Hambúrguer grelhado, queijo cheddar derretido, bacon crocante, cebola caramelizada, alface e tomate, servido em um pão com gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXzzwU8Wye41w_jejFvphRic4unqh44uK1wf9bL1tZhQ&s">
+                    <h3>Double Cheeseburger</h3>
+                    <p>Dois hambúrgueres grelhados, queijo americano, ketchup, mostarda, cebola picada e picles, servidos em um pão com gergelim.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKfp5BweC_VgGKzZZTnLB6jmB4sVn20MqmZk_5bUswZg&s">
+                    <h3>Chicken Nuggets</h3>
+                    <p>Pedaços de frango crocante empanados, acompanhados de molho barbecue.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlTrubZRE3zF1tU9COS315sBytPADsVPdCUYAnLgH2kw&s">
+                    <h3>Salada Caesar</h3>
+                    <p>Alface romana fresca, frango grelhado, queijo parmesão, croutons crocantes e molho Caesar.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/originals/6f/5b/7c/6f5b7c28f992aca6ab2e885cb7824ecb.png">
+                    <h3>Onion Rings</h3>
+                    <p>Anéis de cebola empanados e crocantes, perfeitos para acompanhar o seu hambúrguer favorito.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://marcasmais.com.br/wp-content/uploads/2023/01/BK-Laka-scaled.jpg">
+                    <h3>Milkshake de Baunilha</h3>
+                    <p>Milkshake cremoso de baunilha, feito com sorvete premium e finalizado com chantilly.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Sundae-Chocolate-thumb.png?mtime=20210916155926&focal=none">
+                    <h3>Sundae de Chocolate</h3>
+                    <p>Delicioso sundae de chocolate com calda de chocolate, chantilly e cobertura de chocolate crocante.</p>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Burger King. Todos os direitos reservados.</p>
     </footer>
-    <script>
-        // JavaScript for carousel
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.carousel-item');
-        function showSlides() {
-            slides.forEach(slide => slide.style.display = 'none');
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = 'block';
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-        function nextSlide() {
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            showSlides();
-        }
-        function prevSlide() {
-            slideIndex--;
-            if (slideIndex < 1) {
-                slideIndex = slides.length;
-            }
-            showSlides();
-        }
-        showSlides();
-    </script>
 </body>
 </html>
